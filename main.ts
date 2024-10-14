@@ -17,7 +17,6 @@ function move_up (mySprite2: Sprite) {
     grid.move(mySprite2, 0, -1)
     pause(200)
 }
-let tarefa = "Tarefa: " + ""
 scene.setBackgroundImage(assets.image`tabuleiro`)
 tiles.setCurrentTilemap(tilemap`tabuleiro_tiles`)
 let mySprite5 = sprites.create(img`
@@ -40,5 +39,5 @@ let mySprite5 = sprites.create(img`
     `, SpriteKind.Player)
 mySprite5.setStayInScreen(true)
 grid.place(mySprite5, tiles.getTileLocation(0, 0))
-game.showLongText(tarefa, DialogLayout.Bottom)
+game.showLongText("Escreva uma sequência de passos que leve o personagem até o baú.", DialogLayout.Bottom)
 solução()
